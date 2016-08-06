@@ -1,29 +1,38 @@
 ## Introduction
 
-Filtered index generator for [Hexo]. Add filter feature base on the official index generator.
-
-[简体中文](https://github.com/Jamling/hexo-generator-index2/blob/master/README_zh.md)
+Filtered index generator for [Hexo]. Based on official
+index generator and [hexo-generator-index2]. Support filtering based on
+post front-matter. Also added support for multiple index pages,
+each with custom filtering etc.
 
 ## Installation
 
 ``` bash
-$ npm install hexo-generator-index2 --save
+$ npm install hexo-generator-index3 --save
 $ npm uninstall hexo-generator-index --save
 ```
 
-Don't worry about the uninstallation, this plugin works same as offical index generator when no include/exclude options.
-
 ## Options
 
-``` yaml
+```yaml
 index_generator:
-  per_page: 10
-  order_by: -date
-  include:
-    - category Web # include article which category is Web
-  exclude:
-    - tag Hexo # exclude article which tag is Hexo
-
+  index:
+    per_page: 0
+    order_by: -date
+    layout:
+      - index
+    include:
+      - key type index
+  blog:
+    per_page: 0
+    order_by: -date
+    include:
+      - key type blog
+  apps:
+    per_page: 0
+    order_by: -date
+    include:
+      - category Apps
 ```
 
 - **per_page**: Posts displayed per page. (0 = disable pagination)
@@ -31,13 +40,13 @@ index_generator:
 - **include**: Posts filter include option
 - **exclude**: Posts filter exclude option
 
-The <var>per_page</var> and <var>order_by</var> is the offical index generator option, just keep it.
-
 Include/exclude option is `attribute value` format, available attribute are:
 
 - category: Post category
 - tag: Post tag
 - path: Post source path
+- key: Custom front-matter key/value
+- layout: Layout values, defaults to ['index', 'archive'].
 
 
 ## License
@@ -45,3 +54,4 @@ Include/exclude option is `attribute value` format, available attribute are:
 MIT
 
 [Hexo]: http://hexo.io/
+[hexo-generator-index2]: https://github.com/Jamling/hexo-generator-index2

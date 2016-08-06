@@ -1,6 +1,6 @@
 {
-  "name": "hexo-generator-index2",
-  "version": "0.0.1",
+  "name": "hexo-generator-index3",
+  "version": "1.0.0",
   "description": "Filtered index generator for Hexo.",
   "main": "index",
   "directories": {
@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jamling/hexo-generator-index2.git"
+    "url": "git+https://github.com/carlhopf/hexo-generator-index3.git"
   },
-  "homepage": "https://github.com/Jamling/hexo-generator-index2",
+  "homepage": "https://github.com/carlhopf/hexo-generator-index3",
   "keywords": [
     "hexo",
     "generator",
@@ -21,13 +21,13 @@
     "home"
   ],
   "author": {
-    "name": "Jamling",
-    "email": "li.jamling@gmail.com",
-    "url": "http://ieclipse.cn"
+    "name": "Carl Hopf",
+    "email": "npm@carlhopf.com",
+    "url": "https://carlhopf.com"
   },
   "license": "MIT",
   "dependencies": {
-    "hexo-pagination": "0.0.2",
+    "hexo-pagination": "^0.1.0",
     "object-assign": "^4.0.1"
   }
 }
