@@ -28,6 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "hexo-pagination": "^0.1.0",
+    "lodash": "^4.15.0",
     "object-assign": "^4.0.1"
   }
 }
